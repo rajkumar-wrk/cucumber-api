@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Api</td>
+      <td>28 May 2025, 16:54</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_add_header_and_bearer_authorization_for_accessing_get_favourite_list_endpoints()</td>
+              <td>2</td>
+              <td class="duration" data-value="500900">0.000</td>
+              <td class="duration" data-value="500900">0.001</td>
+              <td class="duration" data-value="1001800">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_add_header_and_bearer_authorization_for_accessing_manage_favourite_list_endpoints()</td>
+              <td>2</td>
+              <td class="duration" data-value="540650">0.000</td>
+              <td class="duration" data-value="540650">0.001</td>
+              <td class="duration" data-value="1081300">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_add_headers_for_category_list()</td>
+              <td>3</td>
+              <td class="duration" data-value="1516500">0.001</td>
+              <td class="duration" data-value="1516500">0.002</td>
+              <td class="duration" data-value="4549500">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_add_headers_for_product_list()</td>
+              <td>3</td>
+              <td class="duration" data-value="762133">0.000</td>
+              <td class="duration" data-value="762133">0.001</td>
+              <td class="duration" data-value="2286400">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_add_request_body_for_manage_favorites_list()</td>
+              <td>2</td>
+              <td class="duration" data-value="4523250">0.004</td>
+              <td class="duration" data-value="4523250">0.006</td>
+              <td class="duration" data-value="9046500">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_add_request_body_for_product_list_with_category_id_and_page_no(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="3623166">0.003</td>
+              <td class="duration" data-value="3623166">0.006</td>
+              <td class="duration" data-value="10869500">0.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_send_request_for_category_list_endpoint(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="358507000">0.358</td>
+              <td class="duration" data-value="358507000">0.391</td>
+              <td class="duration" data-value="1075521000">1.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_send_request_for_favourite_list_endpoint(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="393907600">0.393</td>
+              <td class="duration" data-value="393907600">0.408</td>
+              <td class="duration" data-value="787815200">0.787</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_send_request_for_manage_favorites_list_endpoint(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="390775900">0.390</td>
+              <td class="duration" data-value="390775900">0.396</td>
+              <td class="duration" data-value="781551800">0.781</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_send_request_for_product_list_endpoint(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="788764500">0.788</td>
+              <td class="duration" data-value="788764500">0.855</td>
+              <td class="duration" data-value="2366293500">2.366</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_should_verify_the_category_list_response_message_matches_and_get_the_category_id_of_main_category_name_and_the_sub_category_name_of_saved(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="9822533">0.009</td>
+              <td class="duration" data-value="9822533">0.019</td>
+              <td class="duration" data-value="29467600">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_should_verify_the_get_favourite_list_response_message_matches(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="24690100">0.024</td>
+              <td class="duration" data-value="24690100">0.024</td>
+              <td class="duration" data-value="24690100">0.024</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_should_verify_the_manage_favorites_list_response_message_matches(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="14779100">0.014</td>
+              <td class="duration" data-value="14779100">0.022</td>
+              <td class="duration" data-value="29558200">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddFavourite_Step.user_should_verify_the_product_list_response_message_matches_with_product_name_of_and_save_variant_id_with_specifications(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="15727433">0.015</td>
+              <td class="duration" data-value="15727433">0.033</td>
+              <td class="duration" data-value="47182300">0.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_add_header_and_bearer_authorization_accessing_address_endpoints()</td>
+              <td>1</td>
+              <td class="duration" data-value="1002200">0.001</td>
+              <td class="duration" data-value="1002200">0.001</td>
+              <td class="duration" data-value="1002200">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_add_header_and_bearer_authorization_for_accessing_address_endpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="999300">0.000</td>
+              <td class="duration" data-value="999300">0.000</td>
+              <td class="duration" data-value="999300">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_add_header_and_bearer_authorizations_for_accessing_address_endpoints()</td>
+              <td>4</td>
+              <td class="duration" data-value="250525">0.000</td>
+              <td class="duration" data-value="250525">0.001</td>
+              <td class="duration" data-value="1002100">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_add_header_for_to_get_city_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000400">0.001</td>
+              <td class="duration" data-value="1000400">0.001</td>
+              <td class="duration" data-value="1000400">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_add_headers_and_bearer_authorization_for_access_get_address_endpoints()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_add_headers_for_to_state_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="999300">0.000</td>
+              <td class="duration" data-value="999300">0.000</td>
+              <td class="duration" data-value="999300">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_add_request_body_for_add_new_address_and_work(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="7971975">0.007</td>
+              <td class="duration" data-value="7971975">0.022</td>
+              <td class="duration" data-value="31887900">0.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_add_request_body_for_address_id()</td>
+              <td>1</td>
+              <td class="duration" data-value="10169100">0.010</td>
+              <td class="duration" data-value="10169100">0.010</td>
+              <td class="duration" data-value="10169100">0.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_add_request_body_state_id_for_get_city_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="115509200">0.115</td>
+              <td class="duration" data-value="115509200">0.115</td>
+              <td class="duration" data-value="115509200">0.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_add_request_body_to_update_new_address_and_home(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="9410500">0.009</td>
+              <td class="duration" data-value="9410500">0.009</td>
+              <td class="duration" data-value="9410500">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_send_request_for_add_user_address_endpoint(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="397645300">0.397</td>
+              <td class="duration" data-value="397645300">0.426</td>
+              <td class="duration" data-value="1590581200">1.590</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_send_request_for_city_list_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="413226100">0.413</td>
+              <td class="duration" data-value="413226100">0.413</td>
+              <td class="duration" data-value="413226100">0.413</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_send_request_for_delete_address_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="332500300">0.332</td>
+              <td class="duration" data-value="332500300">0.332</td>
+              <td class="duration" data-value="332500300">0.332</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_send_request_for_get_user_address_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="478996300">0.478</td>
+              <td class="duration" data-value="478996300">0.478</td>
+              <td class="duration" data-value="478996300">0.478</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_send_request_for_state_list_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="413400800">0.413</td>
+              <td class="duration" data-value="413400800">0.413</td>
+              <td class="duration" data-value="413400800">0.413</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_send_request_for_update_add_user_address_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="369633600">0.369</td>
+              <td class="duration" data-value="369633600">0.369</td>
+              <td class="duration" data-value="369633600">0.369</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_should_verify_the_add_user_address_response_message_matches_and_get_the_address_id_saved(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="3961625">0.003</td>
+              <td class="duration" data-value="3961625">0.007</td>
+              <td class="duration" data-value="15846500">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_should_verify_the_state_list_response_message_matches_and_saved_state_id(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="12005500">0.012</td>
+              <td class="duration" data-value="12005500">0.012</td>
+              <td class="duration" data-value="12005500">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_verify_the_city_list_response_message_matches_and_saved_city_id(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="30000700">0.030</td>
+              <td class="duration" data-value="30000700">0.030</td>
+              <td class="duration" data-value="30000700">0.030</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_verify_the_delete_address_response_message_matches(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5138100">0.005</td>
+              <td class="duration" data-value="5138100">0.005</td>
+              <td class="duration" data-value="5138100">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_verify_the_get_user_address_response_message_matches(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="56490300">0.056</td>
+              <td class="duration" data-value="56490300">0.056</td>
+              <td class="duration" data-value="56490300">0.056</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.AddressModule_Step.user_verify_the_update_address_response_message_matches(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4690200">0.004</td>
+              <td class="duration" data-value="4690200">0.004</td>
+              <td class="duration" data-value="4690200">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CancelOrder_Step.user_add_header_and_bearer_authorization_for_accessing_cancel_order_endpoints()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CancelOrder_Step.user_add_request_body_for_cancel_order()</td>
+              <td>2</td>
+              <td class="duration" data-value="4255850">0.004</td>
+              <td class="duration" data-value="4255850">0.006</td>
+              <td class="duration" data-value="8511700">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CancelOrder_Step.user_send_request_for_cancel_order_endpoint(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="423418950">0.423</td>
+              <td class="duration" data-value="423418950">0.456</td>
+              <td class="duration" data-value="846837900">0.846</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CancelOrder_Step.user_should_verify_the_cancel_order_response_message_matches(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="10001000">0.010</td>
+              <td class="duration" data-value="10001000">0.015</td>
+              <td class="duration" data-value="20002000">0.020</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.ChangeProfileModule_Step.user_add_header_and_bearer_authorization_for_accessing_change_profile_picture_endpoints()</td>
+              <td>1</td>
+              <td class="duration" data-value="1055900">0.001</td>
+              <td class="duration" data-value="1055900">0.001</td>
+              <td class="duration" data-value="1055900">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.ChangeProfileModule_Step.user_add_request_body_for_change_profile_picture()</td>
+              <td>1</td>
+              <td class="duration" data-value="10227600">0.010</td>
+              <td class="duration" data-value="10227600">0.010</td>
+              <td class="duration" data-value="10227600">0.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.ChangeProfileModule_Step.user_send_request_for_change_profile_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="504857700">0.504</td>
+              <td class="duration" data-value="504857700">0.504</td>
+              <td class="duration" data-value="504857700">0.504</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.ChangeProfileModule_Step.user_should_verify_the_change_profile_picture_response_message_matches(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="14893800">0.014</td>
+              <td class="duration" data-value="14893800">0.014</td>
+              <td class="duration" data-value="14893800">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CommonStep.user_should_verify_the_status_code_is(int)</td>
+              <td>54</td>
+              <td class="duration" data-value="250957">0.000</td>
+              <td class="duration" data-value="250957">0.006</td>
+              <td class="duration" data-value="13551700">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_add_header_and_bearer_authorization_for_accessing_get_all_the_order_endpoints()</td>
+              <td>3</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_add_new_address(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="7097338300">7.097</td>
+              <td class="duration" data-value="7097338300">7.228</td>
+              <td class="duration" data-value="14194676600">14.194</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_added_the_product_to_cart()</td>
+              <td>2</td>
+              <td class="duration" data-value="3474100600">3.474</td>
+              <td class="duration" data-value="3474100600">3.691</td>
+              <td class="duration" data-value="6948201200">6.948</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_enter_payment_details_procced_with_card_type(io.cucumber.datatable.DataTable)</td>
+              <td>2</td>
+              <td class="duration" data-value="1103561050">1.103</td>
+              <td class="duration" data-value="1103561050">1.144</td>
+              <td class="duration" data-value="2207122100">2.207</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_enter_search_keyword_for_product(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1072255900">1.072</td>
+              <td class="duration" data-value="1072255900">1.075</td>
+              <td class="duration" data-value="2144511800">2.144</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_is_on_the_omr_branch_hotel_page(io.cucumber.datatable.DataTable)</td>
+              <td>2</td>
+              <td class="duration" data-value="3687296300">3.687</td>
+              <td class="duration" data-value="3687296300">3.917</td>
+              <td class="duration" data-value="7374592600">7.374</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_pass_order_id_as_query_param()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_select_the_product_name_contains_from_the_product_list(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="223086700">0.223</td>
+              <td class="duration" data-value="223086700">0.223</td>
+              <td class="duration" data-value="446173400">0.446</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_send_request_for_get_all_order_endpoint(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="430063950">0.430</td>
+              <td class="duration" data-value="430063950">0.439</td>
+              <td class="duration" data-value="860127900">0.860</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_send_request_for_get_specific_order_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="357877700">0.357</td>
+              <td class="duration" data-value="357877700">0.357</td>
+              <td class="duration" data-value="357877700">0.357</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_should_login(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="682847150">0.682</td>
+              <td class="duration" data-value="682847150">0.708</td>
+              <td class="duration" data-value="1365694300">1.365</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_should_verify_order_placed_success_message_contains_and_save_order_number(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="13039695200">13.039</td>
+              <td class="duration" data-value="13039695200">13.234</td>
+              <td class="duration" data-value="26079390400">26.079</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_should_verify_success_message_after_login(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="5542400850">5.542</td>
+              <td class="duration" data-value="5542400850">7.507</td>
+              <td class="duration" data-value="11084801700">11.084</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_should_verify_the_get_all_order_response_message_matches_and_save_the_order_id_using_order_no(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="14873650">0.014</td>
+              <td class="duration" data-value="14873650">0.018</td>
+              <td class="duration" data-value="29747300">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.CreateFE_GetOrderBE_Step.user_should_verify_the_get_all_order_response_message_matches_and_verify_the_product_name(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="8954100">0.008</td>
+              <td class="duration" data-value="8954100">0.008</td>
+              <td class="duration" data-value="8954100">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.LoginModule_Step.user_add_basic_authentication_for_login()</td>
+              <td>11</td>
+              <td class="duration" data-value="22510263">0.022</td>
+              <td class="duration" data-value="22510263">0.237</td>
+              <td class="duration" data-value="247612900">0.247</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.LoginModule_Step.user_add_header()</td>
+              <td>11</td>
+              <td class="duration" data-value="71080963">0.071</td>
+              <td class="duration" data-value="71080963">0.775</td>
+              <td class="duration" data-value="781890600">0.781</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.LoginModule_Step.user_send_request_for_login_endpoint(java.lang.String)</td>
+              <td>11</td>
+              <td class="duration" data-value="656027772">0.656</td>
+              <td class="duration" data-value="656027772">2.107</td>
+              <td class="duration" data-value="7216305500">7.216</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.LoginModule_Step.user_should_verify_the_login_response_body_first_name_present_as_and_get_the_logtoken_saved(java.lang.String)</td>
+              <td>11</td>
+              <td class="duration" data-value="49322409">0.049</td>
+              <td class="duration" data-value="49322409">0.465</td>
+              <td class="duration" data-value="542546500">0.542</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.Login_Logout_Step.user_add_header_for_logout()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.Login_Logout_Step.user_send_request_for_logout_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="336452600">0.336</td>
+              <td class="duration" data-value="336452600">0.336</td>
+              <td class="duration" data-value="336452600">0.336</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.Login_Logout_Step.user_should_verify_the_logout_response_message(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="15462300">0.015</td>
+              <td class="duration" data-value="15462300">0.015</td>
+              <td class="duration" data-value="15462300">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.RemoveFavourites_Step.user_should_verify_the_no_product_favourite_list_response_message_matches(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="6359200">0.006</td>
+              <td class="duration" data-value="6359200">0.006</td>
+              <td class="duration" data-value="6359200">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_header_and_bearer_authorization_for_accessing_add_to_cart_endpoints()</td>
+              <td>3</td>
+              <td class="duration" data-value="801166">0.000</td>
+              <td class="duration" data-value="801166">0.001</td>
+              <td class="duration" data-value="2403500">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_header_and_bearer_authorization_for_accessing_clear_cart_endpoints()</td>
+              <td>3</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_header_and_bearer_authorization_for_accessing_create_order_endpoints()</td>
+              <td>3</td>
+              <td class="duration" data-value="334933">0.000</td>
+              <td class="duration" data-value="334933">0.001</td>
+              <td class="duration" data-value="1004800">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_header_and_bearer_authorization_for_accessing_get_cart_endpoints()</td>
+              <td>3</td>
+              <td class="duration" data-value="332900">0.000</td>
+              <td class="duration" data-value="332900">0.000</td>
+              <td class="duration" data-value="998700">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_header_and_bearer_authorization_for_accessing_get_search_product_list_endpoints()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_header_and_bearer_authorization_for_accessing_set_address_endpoints()</td>
+              <td>3</td>
+              <td class="duration" data-value="496733">0.000</td>
+              <td class="duration" data-value="496733">0.001</td>
+              <td class="duration" data-value="1490200">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_headers_for_search_product()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_request_body_for_add_to_cart()</td>
+              <td>3</td>
+              <td class="duration" data-value="3229433">0.003</td>
+              <td class="duration" data-value="3229433">0.006</td>
+              <td class="duration" data-value="9688300">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_request_body_for_create_order_product(io.cucumber.datatable.DataTable)</td>
+              <td>3</td>
+              <td class="duration" data-value="4729066">0.004</td>
+              <td class="duration" data-value="4729066">0.009</td>
+              <td class="duration" data-value="14187200">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_request_body_for_get_search_product()</td>
+              <td>1</td>
+              <td class="duration" data-value="6681900">0.006</td>
+              <td class="duration" data-value="6681900">0.006</td>
+              <td class="duration" data-value="6681900">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_request_body_for_search_product(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="6632600">0.006</td>
+              <td class="duration" data-value="6632600">0.006</td>
+              <td class="duration" data-value="6632600">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_add_request_body_for_set_address_product()</td>
+              <td>3</td>
+              <td class="duration" data-value="3304500">0.003</td>
+              <td class="duration" data-value="3304500">0.005</td>
+              <td class="duration" data-value="9913500">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_send_request_for_add_to_cart_endpoint(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="435802266">0.435</td>
+              <td class="duration" data-value="435802266">0.467</td>
+              <td class="duration" data-value="1307406800">1.307</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_send_request_for_clear_cart_endpoint(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="367043800">0.367</td>
+              <td class="duration" data-value="367043800">0.435</td>
+              <td class="duration" data-value="1101131400">1.101</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_send_request_for_create_order_endpoint(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="3132456500">3.132</td>
+              <td class="duration" data-value="3132456500">3.261</td>
+              <td class="duration" data-value="9397369500">9.397</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_send_request_for_get_cart_endpoint(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="392679666">0.392</td>
+              <td class="duration" data-value="392679666">0.478</td>
+              <td class="duration" data-value="1178039000">1.178</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_send_request_for_get_search_product_list_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="365855900">0.365</td>
+              <td class="duration" data-value="365855900">0.365</td>
+              <td class="duration" data-value="365855900">0.365</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_send_request_for_search_product_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="376943800">0.376</td>
+              <td class="duration" data-value="376943800">0.376</td>
+              <td class="duration" data-value="376943800">0.376</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_send_request_for_set_address_endpoint(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="354341600">0.354</td>
+              <td class="duration" data-value="354341600">0.370</td>
+              <td class="duration" data-value="1063024800">1.063</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_should_verify_the_add_to_cart_response_message_matches(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="11992533">0.011</td>
+              <td class="duration" data-value="11992533">0.024</td>
+              <td class="duration" data-value="35977600">0.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_should_verify_the_create_order_response_message_matches_and_save_order_no(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="10647366">0.010</td>
+              <td class="duration" data-value="10647366">0.019</td>
+              <td class="duration" data-value="31942100">0.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_should_verify_the_get_cart_response_message_matches_and_save_the_cart_id(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="10653500">0.010</td>
+              <td class="duration" data-value="10653500">0.021</td>
+              <td class="duration" data-value="31960500">0.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_should_verify_the_get_search_product_response_message_matches_with_product_id_and_save_variant_id_with_specifications(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="18190600">0.018</td>
+              <td class="duration" data-value="18190600">0.018</td>
+              <td class="duration" data-value="18190600">0.018</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_should_verify_the_response_message(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="2823433">0.002</td>
+              <td class="duration" data-value="2823433">0.003</td>
+              <td class="duration" data-value="8470300">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_should_verify_the_search_product_response_message_matches_and_save_category_id_and_product_id_with_category_name(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="15375000">0.015</td>
+              <td class="duration" data-value="15375000">0.015</td>
+              <td class="duration" data-value="15375000">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinations.SearchCreateOrder_Step.user_should_verify_the_set_address_response_message_matches(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="2535466">0.002</td>
+              <td class="duration" data-value="2535466">0.003</td>
+              <td class="duration" data-value="7606400">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>94</td>
+            <td>272</td>
+            <td class="duration">0.396</td>
+            <td class="duration">26.079</td>
+            <td class="duration">1:47.728</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
