@@ -308,7 +308,7 @@ public String getCurrentUrl() {
 	public File getScreenshot(String fileName) throws IOException {
 		TakesScreenshot t=(TakesScreenshot)driver;
 		File screenshotAs = t.getScreenshotAs(OutputType.FILE);
-		File file=new File("E:\\class\\maven\\Frameworks\\Screenshot\\baseClass\\"+fileName+".png");
+		File file=new File(new File(System.getProperty("user.dir"))+"\\Screenshot\\baseClass\\"+fileName+".png");
 		FileUtils.copyFile(screenshotAs, file);
 		return file;
 
@@ -317,7 +317,7 @@ public String getCurrentUrl() {
 	public File elementScreenshot(WebElement element,String fileName) throws IOException {
 		
 		File screenshotAs = element.getScreenshotAs(OutputType.FILE);
-		File file=new File("E:\\class\\maven\\Frameworks\\Screenshot\\baseClass\\"+fileName+".png");
+		File file=new File(new File(System.getProperty("user.dir"))+"\\Screenshot\\baseClass\\"+fileName+".png");
 		FileUtils.copyFile(screenshotAs, file);
 		return file;
 
@@ -546,7 +546,7 @@ public  void deSelectByText(WebElement element,String text) {
 	
 static public String excelRead(String fileName,String sheet,int row, int cell) throws IOException {
 		
-		File file=new File("E:\\class\\maven\\ApiTesting\\Excel\\"+fileName+".xlsx");
+		File file=new File(new File(System.getProperty("user.dir"))+"\\Excel\\"+fileName+".xlsx");
 		
 		FileInputStream stream=new FileInputStream(file);
 		Workbook w=new XSSFWorkbook(stream);
@@ -589,7 +589,7 @@ static public String excelRead(String fileName,String sheet,int row, int cell) t
 		}
 	
 public void excelUpdate(String fileName,String sheet,int r,int c, String value) throws IOException {
-	File file=new File("E:\\class\\maven\\ApiTesting\\Excel\\"+fileName+".xlsx");
+	File file=new File(new File(System.getProperty("user.dir"))+"\\Excel\\"+fileName+".xlsx");
 	FileInputStream stream=new FileInputStream(file);
 	Workbook workbook=new XSSFWorkbook(stream);
 	Sheet sheet2 = workbook.getSheet(sheet);
@@ -604,7 +604,7 @@ public void excelUpdate(String fileName,String sheet,int r,int c, String value) 
 }
 
 public static void excelWrite(String fileName,String sheet,int row,int cell,String value) throws IOException {
-	File file=new File("E:\\class\\maven\\ApiTesting\\Excel\\"+fileName+".xlsx");
+	File file=new File(new File(System.getProperty("user.dir"))+"\\Excel\\"+fileName+".xlsx");
 	FileInputStream fs=new FileInputStream(file);
 	Workbook workbook =new XSSFWorkbook(fs);
 	Sheet sheet2 = workbook.getSheet(sheet);
