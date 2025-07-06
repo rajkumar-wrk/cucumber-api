@@ -1,4 +1,4 @@
-@ChangeProfile
+@ChangeProfile @Login
 Feature: Change Profile Module
 
 

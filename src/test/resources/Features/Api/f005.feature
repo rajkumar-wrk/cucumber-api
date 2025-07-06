@@ -1,5 +1,5 @@
 
-@Fav
+@Fav @Login
 Feature: Remove favourites
 
 

@@ -11,7 +11,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(dryRun = false, glue = "com.stepdefinations", features = "src\\test\\resources\\Features", plugin = {
+@CucumberOptions(tags="@Login",dryRun = false, glue = "com.stepdefinations", features = "src\\test\\resources\\Features", plugin = {
 		"pretty", "json:target\\jsonReports\\api.json" })
 public class TestRunner {
 

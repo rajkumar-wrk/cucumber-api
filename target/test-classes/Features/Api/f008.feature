@@ -1,4 +1,4 @@
-@CancelOrder
+@CancelOrder @Login
 Feature: Cancel order
 ------------
 

@@ -1,4 +1,4 @@
-@LogIn_Out
+@LogIn_Out @Login
 Feature: Login and logout
 
 

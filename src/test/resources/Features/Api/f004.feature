@@ -1,4 +1,4 @@
-@Fav
+@Fav @Login
 Feature: Add Favourites
 
 

@@ -1,7 +1,7 @@
 
 Feature: Login Module
 
-
+@Login
 Scenario:  Get User logtoken from login endpoint
 
     Given User add header

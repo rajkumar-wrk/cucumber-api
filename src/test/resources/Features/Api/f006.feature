@@ -1,4 +1,4 @@
-@SearchCreateOrder
+@SearchCreateOrder  @Login
 Feature: Search create order
 
 

@@ -1,4 +1,4 @@
-@CategoryCreateOrder
+@CategoryCreateOrder  @Login
 Feature: Category create order
 
 

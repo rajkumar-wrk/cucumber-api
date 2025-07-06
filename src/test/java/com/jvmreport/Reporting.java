@@ -12,7 +12,7 @@ import net.masterthought.cucumber.ReportBuilder;
 public class Reporting {
 	
 	public static void jvmReport(String json) {
-		File file=new File(System.getProperty("user.dir")+"\\jvmReports");
+		File file=new File(System.getProperty("user.dir")+"\\target\\jvmReports");
 		
 		
 		Configuration configuration=new Configuration(file,"Api");
