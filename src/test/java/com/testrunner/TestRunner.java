@@ -5,20 +5,22 @@ import java.io.File;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
-import com.jvmreport.Reporting;
+
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
+
 @RunWith(Cucumber.class)
 @CucumberOptions(tags="@Login",dryRun = false, glue = "com.stepdefinations", features = "src\\test\\resources\\Features", plugin = {
-		"pretty", "json:target\\jsonReports\\api.json" })
+		"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" })
 public class TestRunner {
 
-	@AfterClass
-	public static void afterClass() {
-		Reporting.jvmReport(new File(System.getProperty("user.dir")) + "\\\\target\\\\jsonReports\\\\api.json");
+//	@AfterClass
+//	public static void afterClass() {
+//		Reporting.jvmReport(new File(System.getProperty("user.dir")) + "\\\\target\\\\jsonReports\\\\api.json");
+//
+//	}
 
-	}
-
+	
 }
